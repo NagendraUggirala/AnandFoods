@@ -1,5 +1,4 @@
 import React from "react";
-import sample from "../assets/hero-food.png";
 
 export default function Hero(){
   return (
