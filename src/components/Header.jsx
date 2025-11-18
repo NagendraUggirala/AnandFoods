@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div>
@@ -17,16 +17,20 @@ const Header = () => {
 
           {/* Navigation Links */}
           <nav className="hidden md:flex items-center gap-6">
-            <a className="hover:underline text-black cursor-pointer">Home</a>
-            <a className="hover:underline text-black cursor-pointer">About Us</a>
-            <a className="hover:underline text-black cursor-pointer">Contact Us</a>
-            <a className="hover:underline text-black cursor-pointer">Foods</a>
+            <Link to="/" className="hover:underline text-black">Home</Link>
+            <Link to="/about" className="hover:underline text-black">About Us</Link>
+            <Link to="/contact" className="hover:underline text-black">Contact Us</Link>
+            <Link to="/foods" className="hover:underline text-black">Foods</Link>
+
             <button className="px-4 py-2 border rounded-full text-black bg-transparent border-white/40">
               Get the App ↗
             </button>
-            <button className="px-4 py-2 bg-black text-white rounded-full">
-              Sign in
-            </button>
+            <Link
+              to="/signin"
+              className="px-4 py-2 rounded-full bg-black text-white text-sm font-semibold hover:bg-orange-600 transition-all"
+            >
+              Sign In
+            </Link>
           </nav>
         </header>
       </div>
