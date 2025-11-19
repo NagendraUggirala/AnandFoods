@@ -21,6 +21,8 @@ const Header = () => {
             <Link to="/about" className="hover:underline text-black">About Us</Link>
             <Link to="/contact" className="hover:underline text-black">Contact Us</Link>
             <Link to="/foods" className="hover:underline text-black">Foods</Link>
+            <Link to="/cart" className="hover:underline text-black">Cart</Link>
+            <Link to="/why-customers-love-us" className="hover:underline text-black">Why Customers Love Us</Link>
 
             <button className="px-4 py-2 border rounded-full text-black bg-transparent border-white/40">
               Get the App ↗
