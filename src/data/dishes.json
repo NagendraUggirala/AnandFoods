@@ -1,0 +1,258 @@
+[
+  {
+    "id": 1,
+    "name": "Greek Salad",
+    "price":25 ,
+    "category": "Salads",
+    "rating": 4,
+    "image": "https://www.thechunkychef.com/wp-content/uploads/2021/07/Greek-Salad-Recipe-recipe-card.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Veg Salad",
+    "price": 30,
+    "category": "Salads",
+    "rating": 4,
+    "image": "https://www.acouplecooks.com/wp-content/uploads/2022/02/Vegetable-Salad-009.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Clover Salad",
+    "price": 30,
+    "category": "Salads",
+    "rating": 4,
+    "image": "https://www.barefootfarmbyron.com/wp-content/uploads/2023/09/delicious-microgreen-salad-recipe-fresh-nutritious-and-easy-to-make.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Chicken Salad",
+    "price": 55,
+    "category": "Salads",
+    "rating": 4,
+    "image": "https://www.lunarecipe.com/wp-content/uploads/2024/09/4.4-12-8.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Lasagna Rolls",
+    "price": 35,
+    "category": "Rolls",
+    "rating": 4,
+    "image": "https://bellyfull.net/wp-content/uploads/2021/01/Lasagna-Roll-Ups-blog-4.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Peri Peri Rolls",
+    "price": 30,
+    "category": "Rolls",
+    "rating": 4,
+    "image": "https://c.ndtvimg.com/2023-12/4mkh7tr8_peri-peri-chicken_625x300_27_December_23.jpg?im=FeatureCrop,algorithm=dnn,width=1200,height=675"
+  },
+  {
+    "id": 7,
+    "name": "Chicken Rolls",
+    "price": 55,
+    "category": "Rolls",
+    "rating": 4,
+    "image": "https://www.foodfusion.com/wp-content/uploads/2017/09/P2190232.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Veg Rolls",
+    "price": 30,
+    "category": "Rolls",
+    "rating": 4,
+    "image": "https://wbcdn.in/assets/img/uploads/mywb/uploads/img_7da6ad49d67349e5fe81ba0df42255eaf7cdb929.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Ripple Ice Cream",
+    "price": 25,
+    "category": "Ice Cream",
+    "rating": 4,
+    "image": "https://tse3.mm.bing.net/th/id/OIP.Md_vpm2KdeF-tCU8f2FwNgAAAA?rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "id": 10,
+    "name": "Fruit Ice Cream",
+    "price": 25,
+    "category": "Ice Cream",
+    "rating": 4,
+    "image": "https://www.eatingonadime.com/wp-content/uploads/2022/04/fruit-ice-cream-11.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Jar Ice Cream",
+    "price": 35,
+    "category": "Ice Cream",
+    "rating": 4,
+    "image": "https://50krecipes.com/wp-content/uploads/2025/03/u6982857984_httpss.mj_.runGoLyou5s7Ek_Mason_Jar_Ice_Cream_Reci_49afd467-5362-447d-846f-d14890d0135d_0.png"
+  },
+  {
+    "id": 12,
+    "name": "Vanilla Ice Cream",
+    "price": 30,
+    "category": "Ice Cream",
+    "rating": 4,
+    "image": "https://tse3.mm.bing.net/th/id/OIP.aDjj_Cy5KXYVTF4UC0pjJgHaIN?rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "id": 13,
+    "name": "Chicken Sandwich",
+    "price": 70,
+    "category": "Sandwiches",
+    "rating": 4,
+    "image": "https://tse3.mm.bing.net/th/id/OIP.zTCU7hEKMDJ2-AUnVvplqAHaI9?rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "id": 14,
+    "name": "Vegan Sandwich",
+    "price": 55,
+    "category": "Sandwiches",
+    "rating": 4,
+    "image": "https://www.hummusapien.com/wp-content/uploads/2020/05/Avocado-Chickpea-Salad-6-1-1057x1536.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Grilled Sandwich",
+    "price": 50,
+    "category": "Sandwiches",
+    "rating": 4,
+    "image": "https://www.vegrecipesofindia.com/wp-content/uploads/2014/01/grilled-sandwich-2.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Bread Sandwich",
+    "price": 50,
+    "category": "Sandwiches",
+    "rating": 4,
+    "image": "https://tse1.explicit.bing.net/th/id/OIP.WJhJrUzEodQ712x53YE-JQHaHZ?w=533&h=532&rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "id": 17,
+    "name": "Garlic Mushroom",
+    "price": 60,
+    "category": "Veg & Rice",
+    "rating": 4,
+    "image": "https://www.ruchikrandhap.com/wp-content/uploads/2019/04/Indian-Style-Butter-Garlic-Mushrooms_1.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Fried Cauliflower",
+    "price": 62,
+    "category": "Veg & Rice",
+    "rating": 4,
+    "image": "https://tse1.mm.bing.net/th/id/OIP.5sQZyXhQ9pUI7Ld8Brw2mAHaJQ?rs=1&pid=ImgDetMain&o=7&rm=3"
+  },
+  {
+    "id": 19,
+    "name": "Mix Veg Pulao",
+    "price": 100,
+    "category": "Veg & Rice",
+    "rating": 4,
+    "image": "https://2.bp.blogspot.com/-SORRtKAQ9Q8/VvlOUQftpyI/AAAAAAAABMM/qVxnwo8qMF0dRLL-4gp_lq5msNsbarMHQ/s1600/veg%2Bp.JPG"
+  },
+  {
+    "id": 20,
+    "name": "Rice Zucchini",
+    "price": 120,
+    "category": "Veg & Rice",
+    "rating": 4,
+    "image": "https://www.watchwhatueat.com/wp-content/uploads/2019/03/Quick-and-Easy-Garlic-Zucchini-Rice-7.jpg"
+  },
+  {
+    "id": 21,
+    "name": "Cheese Pasta",
+    "price": 120,
+    "category": "Pasta",
+    "rating": 4,
+    "image": "https://cheeseknees.com/wp-content/uploads/2022/06/Cheese-Pasta-03.jpg"
+  },
+  {
+    "id": 22,
+    "name": "Tomato Pasta",
+    "price": 180,
+    "category": "Pasta",
+    "rating": 4,
+    "image": "https://thumbs.dreamstime.com/b/tomato-pasta-20181491.jpg"
+  },
+  {
+    "id": 23,
+    "name": "Creamy Pasta",
+    "price": 160,
+    "category": "Pasta",
+    "rating": 4,
+    "image": "https://lilluna.com/wp-content/uploads/2017/10/penne-pasta-resize-3.jpg"
+  },
+  {
+    "id": 24,
+    "name": "Chicken Pasta",
+    "price": 240,
+    "category": "Pasta",
+    "rating": 4,
+    "image": "https://delishvibe.com/wp-content/uploads/2025/03/One-Pot-Creamy-Parmesan-Chicken-Pasta.jpg"
+  },
+  {
+    "id": 25,
+    "name": "Butter Noodles",
+    "price": 140,
+    "category": "Noodles",
+    "rating": 4,
+    "image": "https://thecozycook.com/wp-content/uploads/2021/08/Buttered-Noodles.jpg"
+  },
+  {
+    "id": 26,
+    "name": "Veg Noodles",
+    "price": 120,
+    "category": "Noodles",
+    "rating": 4,
+    "image": "https://kalimirchbysmita.com/wp-content/uploads/2016/05/Veg-Hakka-Noodles-03.jpg"
+  },
+  {
+    "id": 27,
+    "name": "Somen Noodles",
+    "price": 200,
+    "category": "Noodles",
+    "rating": 4,
+    "image": "https://yujinizakaya.com.sg/wp-content/uploads/2025/04/japanese-somen-noodle-recipe-1745338085.jpg"
+  },
+  {
+    "id": 28,
+    "name": "Cooked Noodles",
+    "price": 150,
+    "category": "Noodles",
+    "rating": 4,
+    "image": "https://www.chilipeppermadness.com/wp-content/uploads/2023/06/Gochujang-Noodles-Recipe1.jpg"
+  },
+  {
+    "id": 29,
+    "name": "Cup Cake",
+    "price": 14,
+    "category": "Cakes",
+    "rating": 4,
+    "image": "https://sugargeekshow.com/wp-content/uploads/2022/09/chocolate_cupcakes_featured-2-scaled.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Vegan Cake",
+    "price": 12,
+    "category": "Cakes",
+    "rating": 4,
+    "image": "https://www.rainbownourishments.com/wp-content/uploads/2021/10/vegan-lemon-olive-oil-cake-1.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Butterscotch Cake",
+    "price": 20,
+    "category": "Cakes",
+    "rating": 4,
+    "image": "https://www.lifeloveandsugar.com/wp-content/uploads/2018/08/Butterscotch-Cake5.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Sliced Cake",
+    "price": 15,
+    "category": "Cakes",
+    "rating": 4,
+    "image": "https://cdn.pixabay.com/photo/2025/02/07/14/22/chocolate-cake-9390172_1280.jpg"
+  }
+]

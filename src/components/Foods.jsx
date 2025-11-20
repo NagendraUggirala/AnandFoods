@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
+import TopDishes from "./TopDishes";
 
 export default function FoodOptions() {
   const scrollRef = useRef(null);
@@ -28,6 +29,7 @@ export default function FoodOptions() {
   ];
 
   return (
+    <div>
     <div className="w-full py-10 px-4 md:px-20">
       
       {/* Heading */}
@@ -79,6 +81,8 @@ export default function FoodOptions() {
         </div>
 
       </div>
+    </div>
+<TopDishes/>
     </div>
   );
 }
