@@ -1,61 +1,115 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
-export default function Cart({ cart, increaseQty, decreaseQty }) {
-  
-  // Calculate total amount
+export default function Cart() {
+
+  // ⭐ ADDED — Read cart from localStorage on load
+  const [cart, setCart] = useState([]);
+
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(savedCart);
+  }, []);
+  // ⭐ END
+
+
+  // ⭐ ADDED — Save updates to localStorage + state
+  const updateCart = (newCart) => {
+    setCart(newCart);
+    localStorage.setItem("cart", JSON.stringify(newCart));
+  };
+
+
+  // ⭐ ADDED — Increase qty
+  const increaseQty = (id) => {
+    const updated = cart.map((item) =>
+      item.id === id ? { ...item, qty: item.qty + 1 } : item
+    );
+    updateCart(updated);
+  };
+
+
+  // ⭐ ADDED — Decrease qty
+  const decreaseQty = (id) => {
+    let updated = cart.map((item) =>
+      item.id === id ? { ...item, qty: item.qty - 1 } : item
+    );
+
+    // remove item if qty becomes 0
+    updated = updated.filter((item) => item.qty > 0);
+
+    updateCart(updated);
+  };
+
+
+  // ⭐ UPDATED — Calculate total
   const totalAmount = cart.reduce(
-    (total, item) => total + item.price * item.qty,
+    (sum, item) => sum + item.qty * item.price,
     0
   );
 
-  return (
-    <div className="p-4 bg-gray-100 rounded-xl shadow-lg">
-      <h2 className="text-xl font-bold mb-4">Your Cart</h2>
 
-      {/* Empty Cart */}
+  return (
+    <div className="p-4 bg-gray-100 min-h-screen rounded-xl">
+
+      <h2 className="text-2xl font-bold mb-6 text-center">Your Cart</h2>
+
+      {/* Empty State */}
       {cart.length === 0 && (
-        <p className="text-gray-500">No items in cart</p>
+        <p className="text-gray-600 text-center text-lg">Your cart is empty</p>
       )}
 
-      {/* Cart Items */}
-      {cart.map((item) => (
-        <div
-          key={item.id}
-          className="flex justify-between items-center bg-white p-3 rounded-lg shadow mb-3"
-        >
-          <div>
-            <h3 className="text-lg font-semibold">{item.name}</h3>
-            <p className="text-green-600 font-semibold">₹{item.price}</p>
+      <div className="flex flex-col gap-4">
+        {cart.map((item) => (
+          <div
+            key={item.id}
+            className="flex justify-between items-center bg-white shadow p-4 rounded-xl gap-4
+                       sm:flex-row flex-col"
+          >
+
+            {/* LEFT SECTION */}
+            <div className="flex items-center gap-4">
+              <img
+                src={item.img}
+                alt={item.name}
+                className="w-20 h-20 object-cover rounded-lg"  // ⭐ UPDATED
+              />
+
+              <div>
+                <h3 className="text-lg font-semibold">{item.name}</h3>
+                <p className="text-green-600 font-semibold">₹{item.price}</p>
+              </div>
+            </div>
+
+            {/* RIGHT SECTION — ⭐ UPDATED quantity controller */}
+            <div className="flex items-center gap-3">
+              <button
+                onClick={() => decreaseQty(item.id)}
+                className="bg-red-500 text-white px-3 py-1 rounded-lg text-lg"
+              >
+                -
+              </button>
+
+              <span className="font-bold text-lg">{item.qty}</span>
+
+              <button
+                onClick={() => increaseQty(item.id)}
+                className="bg-green-600 text-white px-3 py-1 rounded-lg text-lg"
+              >
+                +
+              </button>
+            </div>
+
           </div>
+        ))}
+      </div>
 
-          <div className="flex items-center gap-3">
-            {/* Decrease Qty */}
-            <button
-              onClick={() => decreaseQty(item.id)}
-              className="bg-red-500 text-white px-3 py-1 rounded-lg text-lg"
-            >
-              -
-            </button>
-
-            {/* Qty Count */}
-            <span className="font-bold text-lg">{item.qty}</span>
-
-            {/* Increase Qty */}
-            <button
-              onClick={() => increaseQty(item.id)}
-              className="bg-green-600 text-white px-3 py-1 rounded-lg text-lg"
-            >
-              +
-            </button>
-          </div>
-        </div>
-      ))}
-
-      {/* Total Amount */}
-      <h2 className="text-xl font-bold mt-4">
-        Total Amount:{" "}
-        <span className="text-purple-700">₹{totalAmount}</span>
-      </h2>
+      {/* TOTAL */}
+      <div className="mt-6 text-center">
+        <h2 className="text-xl font-bold">
+          Total Amount: <span className="text-purple-700">₹{totalAmount}</span>
+        </h2>
+      </div>
+      
     </div>
   );
 }
