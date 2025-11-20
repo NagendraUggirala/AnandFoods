@@ -2,24 +2,24 @@ import React, { useState, useEffect } from "react";
 
 export default function Cart() {
 
-  // ⭐ ADDED — Read cart from localStorage on load
+  
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const savedCart = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(savedCart);
   }, []);
-  // ⭐ END
+  
 
 
-  // ⭐ ADDED — Save updates to localStorage + state
+  
   const updateCart = (newCart) => {
     setCart(newCart);
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
 
 
-  // ⭐ ADDED — Increase qty
+  
   const increaseQty = (id) => {
     const updated = cart.map((item) =>
       item.id === id ? { ...item, qty: item.qty + 1 } : item
@@ -28,20 +28,20 @@ export default function Cart() {
   };
 
 
-  // ⭐ ADDED — Decrease qty
+  
   const decreaseQty = (id) => {
     let updated = cart.map((item) =>
       item.id === id ? { ...item, qty: item.qty - 1 } : item
     );
 
-    // remove item if qty becomes 0
+    
     updated = updated.filter((item) => item.qty > 0);
 
     updateCart(updated);
   };
 
 
-  // ⭐ UPDATED — Calculate total
+ 
   const totalAmount = cart.reduce(
     (sum, item) => sum + item.qty * item.price,
     0
@@ -53,7 +53,7 @@ export default function Cart() {
 
       <h2 className="text-2xl font-bold mb-6 text-center">Your Cart</h2>
 
-      {/* Empty State */}
+     
       {cart.length === 0 && (
         <p className="text-gray-600 text-center text-lg">Your cart is empty</p>
       )}
@@ -66,12 +66,12 @@ export default function Cart() {
                        sm:flex-row flex-col"
           >
 
-            {/* LEFT SECTION */}
+           
             <div className="flex items-center gap-4">
               <img
                 src={item.img}
                 alt={item.name}
-                className="w-20 h-20 object-cover rounded-lg"  // ⭐ UPDATED
+                className="w-20 h-20 object-cover rounded-lg"  
               />
 
               <div>
@@ -80,7 +80,7 @@ export default function Cart() {
               </div>
             </div>
 
-            {/* RIGHT SECTION — ⭐ UPDATED quantity controller */}
+          
             <div className="flex items-center gap-3">
               <button
                 onClick={() => decreaseQty(item.id)}
@@ -103,7 +103,7 @@ export default function Cart() {
         ))}
       </div>
 
-      {/* TOTAL */}
+      
       <div className="mt-6 text-center">
         <h2 className="text-xl font-bold">
           Total Amount: <span className="text-purple-700">₹{totalAmount}</span>
