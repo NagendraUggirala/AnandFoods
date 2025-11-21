@@ -1,25 +1,27 @@
 import React, { useState, useEffect } from "react";
+import AnandFoodsHighlights from "./AnandFoodsHighlights";
+import FoodHomeBanner from "./FoodHomeBanner";
 
 export default function Hero() {
 
-  // ⭐ ADDED — Local cart state synced with localStorage
+
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
     const saved = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(saved);
   }, []);
-  // ⭐ END
 
 
-  // ⭐ ADDED — Save updates to localStorage
+
+
   const updateCart = (newCart) => {
     setCart(newCart);
     localStorage.setItem("cart", JSON.stringify(newCart));
   };
 
 
-  // ⭐ ADDED — Add item or increase qty
+
   const increaseQty = (item) => {
     let newCart = [...cart];
     const exists = newCart.find((x) => x.id === item.id);
@@ -36,7 +38,7 @@ export default function Hero() {
   };
 
 
-  // ⭐ ADDED — Decrease qty
+
   const decreaseQty = (item) => {
     let newCart = [...cart];
 
@@ -55,7 +57,7 @@ export default function Hero() {
   };
 
 
-  // ⭐ ADDED — Utility to get item quantity
+
   const getQty = (id) => {
     const item = cart.find((x) => x.id === id);
     return item ? item.qty : 0;
@@ -87,52 +89,15 @@ export default function Hero() {
 
   return (
     <>
+
       <div className="w-full min-h-screen bg-white">
 
-        {/* HERO SECTION — unchanged */}
 
-         {/* HERO SECTION */}
-        <section className="w-full relative">
-          <div className="absolute inset-0 w-full h-full object-cover">
-            <img
-              className="w-full h-full object-cover"
-              src="/img/headerImg.jpg"
-              alt="hero"
-            />
-            <div className="absolute inset-0 /40" />
-          </div>
 
-          <div className="relative container-pad h-[520px] flex items-center justify-center text-center">
-            <div>
-              <h1 className="mt-4 text-white text-4xl md:text-6xl font-bold leading-tight">
-                Order food & Discover best restaurants.
-              </h1>
-              <p className="mt-4 text-blue-100 max-w-3xl mx-auto">AnandFoods</p>
+        {/* HERO SECTION */}
 
-              {/* Search bars */}
-              <div className="mt-10 flex flex-col md:flex-row gap-4 md:gap-6 justify-center">
-                <div className="bg-white flex items-center px-4 py-3 rounded-full w-[320px] md:w-[350px] shadow-md">
-                  <span className="text-orange-500 text-xl">📍</span>
-                  <input
-                    type="text"
-                    placeholder="Enter your delivery location"
-                    className="ml-3 w-full outline-none text-gray-600"
-                  />
-                </div>
-
-                <div className="bg-white flex items-center px-4 py-3 rounded-full w-[320px] md:w-[350px] shadow-md">
-                  <input
-                    type="text"
-                    placeholder="Search for restaurant, item..."
-                    className="w-full outline-none text-gray-600"
-                  />
-                  <span className="text-gray-500 text-xl ml-2">🔍</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <FoodHomeBanner />
+        <AnandFoodsHighlights />
         {/* MENU GRID */}
         <section className="px-6 md:px-12 lg:px-20 py-14">
           <h2 className="text-3xl font-bold text-black-700 text-center mb-10">
@@ -142,7 +107,7 @@ export default function Hero() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
             {items.map((item) => {
-              const qty = getQty(item.id); // ⭐ ADDED
+              const qty = getQty(item.id);
 
               return (
                 <div
@@ -157,7 +122,7 @@ export default function Hero() {
                   <h3 className="text-xl font-semibold">{item.name}</h3>
                   <p className="text-gray-600 mt-1">₹{item.price}</p>
 
-                  {/* ⭐ UPDATED — Dynamic Add-to-cart button */}
+
                   {qty === 0 ? (
                     <button
                       onClick={() => increaseQty(item)}

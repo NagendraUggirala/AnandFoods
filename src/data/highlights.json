@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "tag": "Today’s Special",
+    "title": "Hand-tossed Paneer Tikka Pizza from AnandFoods Kitchens",
+    "description": "Freshly baked base, smoky paneer tikka, crunchy onions, and our in-house masala cheese. Available only today with limited slots across selected areas.",
+    "cta": "Order today’s special",
+    "image": "https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg?auto=compress&cs=tinysrgb&w=800"
+  },
+  {
+    "id": 2,
+    "tag": "Today’s Discount",
+    "title": "Flat 40% OFF on Family Combos after 7 PM",
+    "description": "Make dinner easy with AnandFoods value combos. Mix biryanis, starters and desserts and save more with our limited-time evening discount.",
+    "cta": "Grab the offer",
+    "image": "https://www.bitesbee.com/wp-content/uploads/2021/09/Methi-Malai-Paneer-Aloo-Jeera-Rajma-with-Rice-_-Butter-NaanRoti.png"
+  },
+  {
+    "id": 3,
+    "tag": "Top Rated",
+    "title": "Most-loved: Hyderabadi Dum Biryani (4.8★ rated)",
+    "description": "Slow cooked, layered with fragrant rice and rich spices. Loved by thousands of AnandFoods customers across the city this week.",
+    "cta": "Try the top-rated dish",
+    "image": "https://as2.ftcdn.net/v2/jpg/05/51/07/25/1000_F_551072558_rENux9fqlec5GPBJSaToT69xjcYiGxje.jpg"
+  }
+]
