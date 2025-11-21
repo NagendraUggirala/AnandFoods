@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Hero(addToCart) {
+export default function Hero({ addToCart }) {
   const items = [
     { id: 1, name: "Mush Room curry", price: 120, img: "/img/mushroom.jpg" },
     { id: 2, name: "Panner Rotti", price: 60, img: "/img/panner.JPG" },
@@ -18,17 +18,15 @@ export default function Hero(addToCart) {
     { id: 11, name: "Ice Cream", price: 40, img: "/img/ice.jpg" },
     { id: 12, name: "Laddu", price: 15, img: "/img/laddu.webp" },
 
-    // NEW — Mocktails
     { id: 13, name: "Virgin Mojito", price: 80, img: "/img/mojo.webp" },
     { id: 14, name: "Blue Lagoon", price: 90, img: "/img/blue.webp" },
     { id: 15, name: "Strawberry Mocktail", price: 100, img: "/img/strawberry.webp" },
 
-
-    // NEW — Juices
     { id: 17, name: "Orange Juice", price: 70, img: "/img/orange.jfif" },
     { id: 18, name: "Mango Juice", price: 60, img: "/img/mango.jpg" },
     { id: 20, name: "Pineapple Juice", price: 55, img: "/img/pineapple.avif" },
   ];
+
   return (
     <>
       <div className="w-full min-h-screen bg-white">
@@ -40,9 +38,8 @@ export default function Hero(addToCart) {
               className="w-full h-full object-cover"
               src="/img/headerImg.jpg"
               alt="hero"
-            
-          />
-          <div className="absolute inset-0 /40" />
+            />
+            <div className="absolute inset-0 /40" />
           </div>
 
           <div className="relative container-pad h-[520px] flex items-center justify-center text-center">
@@ -78,7 +75,7 @@ export default function Hero(addToCart) {
 
         {/* MENU GRID */}
         <section className="px-6 md:px-12 lg:px-20 py-14">
-          <h2 className="text-3xl font-bold text-green-700 text-center mb-10">
+          <h2 className="text-3xl font-bold text-black-700 text-center mb-10">
             Menu Items
           </h2>
 
@@ -88,7 +85,12 @@ export default function Hero(addToCart) {
                 key={item.id}
                 className="bg-white shadow-md border rounded-2xl p-4 hover:shadow-xl transition"
               >
-                <img src={item.img} className="rounded-xl mb-3" alt={item.name} />
+                <img
+                  src={item.img}
+                  className="rounded-xl mb-3 h-[500px] w-full object-cover"
+                  alt={item.name}
+                />
+
                 <h3 className="text-xl font-semibold">{item.name}</h3>
                 <p className="text-gray-600 mt-1">₹{item.price}</p>
 
