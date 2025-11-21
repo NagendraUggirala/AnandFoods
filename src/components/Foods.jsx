@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 import TopDishes from "./TopDishes";
+import AutoMovingCards from "./AutoMovingCards";
 
 export default function FoodOptions() {
   const scrollRef = useRef(null);
@@ -17,10 +18,10 @@ export default function FoodOptions() {
     { name: "Dosa", img: "/foods/dosa.png" },
     { name: "Poori", img: "/foods/poori.png" },
     { name: "Idli", img: "/foods/idli.png" },
-    { name: "Pesarattu", img: "/foods/pesarattu.jpg" },
+    { name: "Pesarattu", img: "/foods/pesarattu.png" },
     { name: "Vada", img: "/foods/vada.jpg" },
-    { name: "Cake", img: "/foods/cake.avif" },
-    { name: "Omelette", img: "/foods/omelette.avif" },
+    { name: "Cake", img: "/foods/cake.jpg" },
+    { name: "Omelette", img: "/foods/omelette.png" },
     { name: "Juice", img: "/foods/juice.jpg" },
     { name: "Tea", img: "/foods/tea.webp" },
     { name: "Pure Veg", img: "/foods/pureveg.png" },
@@ -81,7 +82,9 @@ export default function FoodOptions() {
         </div>
 
       </div>
+
     </div>
+    <AutoMovingCards />
 <TopDishes/>
     </div>
   );

@@ -24,7 +24,7 @@ const Header = () => {
 
           <div className="flex flex-col leading-tight">
             <h1 className="text-lg sm:text-xl font-bold text-orange-600">
-              ANAND YATRA
+              ANAND FOODS
             </h1>
             <p className="text-[10px] sm:text-xs text-gray-600 italic">
               "Dharmo Rakshati Rakshitah"

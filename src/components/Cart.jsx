@@ -109,6 +109,16 @@ export default function Cart() {
           Total Amount: <span className="text-purple-700">₹{totalAmount}</span>
         </h2>
       </div>
+
+             <div className="mt-6 text-center">
+  <a
+    href="/checkout"
+    className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg hover:bg-blue-700 transition"
+  >
+    Proceed to Checkout
+  </a>
+</div>
+ 
       
     </div>
   );

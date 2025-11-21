@@ -84,6 +84,52 @@ export default function Contact() {
         {/* TOP SECTION: LEFT + RIGHT */}
         <div className="flex flex-col md:flex-row gap-16">
 
+
+           {/* RIGHT GLASS FORM CARD */}
+          <div
+            className="
+            w-full md:w-1/2 
+            bg-white/60
+            backdrop-blur-xl
+            border border-white/40 
+            shadow-[0_8px_30px_rgba(0,0,0,0.12)]
+            rounded-3xl 
+            p-10 
+            space-y-6
+          "
+          >
+            <h2 className="text-3xl font-bold text-gray-900">Get in touch</h2>
+
+            <input
+              type="text"
+              placeholder="Enter Name"
+              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-orange-400"
+            />
+
+            <input
+              type="email"
+              placeholder="Enter Email Address"
+              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-orange-400"
+            />
+
+            <textarea
+              rows="5"
+              placeholder="Enter Message"
+              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-orange-400"
+            ></textarea>
+
+            <button className="w-full py-3 bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold rounded-xl transition shadow-md">
+              Submit
+            </button>
+
+            <p className="text-sm text-gray-700 text-center">
+              By contacting us you agree to the{" "}
+              <span className="text-orange-600 font-semibold">Terms and Conditions</span>{" "}
+              and{" "}
+              <span className="text-orange-600 font-semibold">Privacy Policy</span>.
+            </p>
+          </div>
+
           {/* LEFT SECTION */}
           <div className="w-full md:w-1/2 space-y-8">
             <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
@@ -154,50 +200,7 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* RIGHT GLASS FORM CARD */}
-          <div
-            className="
-            w-full md:w-1/2 
-            bg-white/60
-            backdrop-blur-xl
-            border border-white/40 
-            shadow-[0_8px_30px_rgba(0,0,0,0.12)]
-            rounded-3xl 
-            p-10 
-            space-y-6
-          "
-          >
-            <h2 className="text-3xl font-bold text-gray-900">Get in touch</h2>
-
-            <input
-              type="text"
-              placeholder="Enter Name"
-              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-orange-400"
-            />
-
-            <input
-              type="email"
-              placeholder="Enter Email Address"
-              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-orange-400"
-            />
-
-            <textarea
-              rows="5"
-              placeholder="Enter Message"
-              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-orange-400"
-            ></textarea>
-
-            <button className="w-full py-3 bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold rounded-xl transition shadow-md">
-              Submit
-            </button>
-
-            <p className="text-sm text-gray-700 text-center">
-              By contacting us you agree to the{" "}
-              <span className="text-orange-600 font-semibold">Terms and Conditions</span>{" "}
-              and{" "}
-              <span className="text-orange-600 font-semibold">Privacy Policy</span>.
-            </p>
-          </div>
+         
         </div>
 
         {/* FAQ SECTION INSIDE CONTACT PAGE */}

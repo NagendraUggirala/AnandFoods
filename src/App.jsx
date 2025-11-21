@@ -8,6 +8,8 @@ import Foods from './components/Foods'
 import AuthLayout from './components/AuthLayout'
 import SignIn from './components/SignIn'
 import Cart from './components/Cart'
+import Checkout from './components/Checkout'
+
 
 
 
@@ -26,6 +28,8 @@ export default function App() {
           <Route path="/foods" element={<Foods />} />
 
           <Route path="/cart" element={<Cart />} />
+
+          <Route path='checkout' element={<Checkout />} />
 
 
         </Route>
