@@ -7,6 +7,7 @@ import Contact from './components/Contact'
 import Foods from './components/Foods'
 import AuthLayout from './components/AuthLayout'
 import SignIn from './components/SignIn'
+import Cart from './components/Cart'
 
 
 
@@ -24,8 +25,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/foods" element={<Foods />} />
 
-
-          
+          <Route path="/cart" element={<Cart />} />
 
 
         </Route>
