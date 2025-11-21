@@ -38,11 +38,11 @@ export default function Hero(addToCart) {
           <div className="absolute inset-0 w-full h-full object-cover">
             <img
               className="w-full h-full object-cover"
-              src="https://static.vecteezy.com/system/resources/previews/050/902/688/large_2x/assorted-traditional-indian-meals-with-fresh-vegetables-and-spices-on-leaf-background-food-design-for-menu-and-poster-photo.jpg%22"
+              src="/img/headerImg.jpg"
               alt="hero"
             
           />
-          <div className="absolute inset-0 bg-black /40" />
+          <div className="absolute inset-0 /40" />
           </div>
 
           <div className="relative container-pad h-[520px] flex items-center justify-center text-center">

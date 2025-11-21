@@ -7,12 +7,14 @@ import Contact from './components/Contact'
 import Foods from './components/Foods'
 import AuthLayout from './components/AuthLayout'
 import SignIn from './components/SignIn'
-import Cart from './components/Cart';
-import WhyCustomersLoveUsSlider from './components/WhyCustomersLoveUsSlider';
+
+
 
 
 export default function App() {
   return (
+
+
     <Router>
       <Routes>
         <Route path='/' element={<MainLayout />}>
@@ -20,8 +22,10 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/foods" element={<Foods />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/why-customers-love-us" element={<WhyCustomersLoveUsSlider />} />
+
+          
+
+
         </Route>
         <Route element={<AuthLayout />}>
           <Route path="/signin" element={<SignIn />} />
@@ -29,5 +33,7 @@ export default function App() {
 
       </Routes>
     </Router>
+
+
   )
 }
