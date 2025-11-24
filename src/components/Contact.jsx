@@ -48,22 +48,11 @@ export default function Contact() {
     <div>
 
 
-
-
-
-
-
       <div className="min-h-screen from-white via-orange-50 to-orange-100 px-6 md:px-20 py-16 flex flex-col gap-20">
-
-
-
-
-
-
 
         {/* PAGE TITLE */}
         <div className="text-center mb-10">
-          <h1 className="text-5xl font-extrabold text-gray-900">
+          <h1 className="text-5xl font-extrabold text-blue-800">
             Contact Us
           </h1>
           <p className="text-lg text-gray-600 mt-2">
@@ -71,15 +60,6 @@ export default function Contact() {
           </p>
 
         </div>
-
-
-
-
-
-
-
-
-
 
         {/* TOP SECTION: LEFT + RIGHT */}
         <div className="flex flex-col md:flex-row gap-16">
@@ -98,48 +78,48 @@ export default function Contact() {
             space-y-6
           "
           >
-            <h2 className="text-3xl font-bold text-gray-900">Get in touch</h2>
+            <h2 className="text-3xl font-bold text-blue-800">Get in touch</h2>
 
             <input
               type="text"
               placeholder="Enter Name"
-              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-blue-400"
             />
 
             <input
               type="email"
               placeholder="Enter Email Address"
-              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-blue-400"
             />
 
             <textarea
               rows="5"
               placeholder="Enter Message"
-              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-orange-400"
+              className="w-full p-4 bg-white/70 rounded-xl border border-gray-300 outline-none focus:ring-2 focus:ring-blue-400"
             ></textarea>
 
-            <button className="w-full py-3 bg-orange-500 hover:bg-orange-600 text-white text-lg font-semibold rounded-xl transition shadow-md">
+            <button className="w-full py-3 bg-blue-500 hover:bg-blue-600 text-white text-lg font-semibold rounded-xl transition shadow-md">
               Submit
             </button>
 
             <p className="text-sm text-gray-700 text-center">
               By contacting us you agree to the{" "}
-              <span className="text-orange-600 font-semibold">Terms and Conditions</span>{" "}
+              <span className="text-blue-600 font-semibold">Terms and Conditions</span>{" "}
               and{" "}
-              <span className="text-orange-600 font-semibold">Privacy Policy</span>.
+              <span className="text-blue-600 font-semibold">Privacy Policy</span>.
             </p>
           </div>
 
           {/* LEFT SECTION */}
           <div className="w-full md:w-1/2 space-y-8">
-            <h1 className="text-4xl md:text-5xl font-extrabold text-gray-900">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-blue-800">
               Customer Support
             </h1>
 
             <p className="text-lg text-gray-700">
               Email:{" "}
-              <span className="font-semibold text-orange-600">
-                support@AnandFoods.in
+              <span className="font-semibold text-blue-600">
+                support@anandfoods.com
               </span>
             </p>
 
@@ -149,7 +129,7 @@ export default function Contact() {
                 Find us on
               </h2>
 
-              <div className="flex gap-5 text-orange-500 text-4xl">
+              <div className="flex gap-5 text-blue-500 text-4xl">
                 <FaLinkedin />
                 <FaInstagram />
                 <FaYoutube />
@@ -166,8 +146,7 @@ export default function Contact() {
               </h2>
 
               <p className="text-gray-800 leading-relaxed">
-                No. 55, Sy No. 8-14, Ground Floor, I&J Block, Embassy TechVillage,
-                Outer Ring Road, Devarbisanhalli, Bengaluru 560 103, Karnataka.
+                 H.No. 131/A, 2nd Floor, MLA Colony, Beside Vamsiram Banjara Abodes, Road No.12, Lane 14, Banjara Hills, Hyderabad-500034.
                 <br />
                 Corporate Identity Number:{" "}
                 <span className="text-gray-900 font-bold">
@@ -175,7 +154,7 @@ export default function Contact() {
                 </span>
               </p>
 
-              <button className="mt-4 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow transition">
+              <button className="mt-4 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow transition">
                 Get Directions
               </button>
             </div>
@@ -185,8 +164,9 @@ export default function Contact() {
               </h2>
 
               <p className="text-gray-800 leading-relaxed">
-                No. 55, Sy No. 8-14, Ground Floor, I&J Block, Embassy TechVillage,
-                Outer Ring Road, Devarbisanhalli, Bengaluru 560 103, Karnataka.
+                <li>Something not right?  </li>
+                <li> We’re here to help. </li> 
+                <li>Tap below for immediate support.</li>
                 <br />
                 Corporate Identity Number:{" "}
                 <span className="text-gray-900 font-bold">
@@ -194,7 +174,7 @@ export default function Contact() {
                 </span>
               </p>
 
-              <button className="mt-4 px-6 py-3 bg-orange-500 hover:bg-orange-600 text-white font-semibold rounded-lg shadow transition">
+              <button className="mt-4 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow transition">
                 Report Issue!
               </button>
             </div>
@@ -205,7 +185,7 @@ export default function Contact() {
 
         {/* FAQ SECTION INSIDE CONTACT PAGE */}
         <div className="space-y-10">
-          <h2 className="text-4xl font-extrabold text-gray-900 text-center">
+          <h2 className="text-4xl font-extrabold text-blue-800 text-center">
             Frequently Asked Questions
           </h2>
 
@@ -230,9 +210,9 @@ export default function Contact() {
                   </h3>
 
                   {openIndex === i ? (
-                    <IoChevronUp className="text-2xl text-orange-600" />
+                    <IoChevronUp className="text-2xl text-blue-600" />
                   ) : (
-                    <IoChevronDown className="text-2xl text-orange-600" />
+                    <IoChevronDown className="text-2xl text-blue-600" />
                   )}
                 </div>
 
@@ -287,7 +267,7 @@ export default function Contact() {
             }
             className="
       w-14 h-14 rounded-full 
-      bg-orange-500 hover:bg-orange-600 
+      bg-blue-500 hover:bg-blue-600 
       shadow-lg flex items-center justify-center 
       text-white text-3xl transition transform hover:scale-110
     "

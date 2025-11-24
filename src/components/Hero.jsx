@@ -134,12 +134,12 @@ export default function Hero() {
                   {qty === 0 ? (
                     <button
                       onClick={() => increaseQty(item)}
-                      className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
+                      className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition"
                     >
                       Add to Cart
                     </button>
                   ) : (
-                    <div className="mt-4 flex items-center justify-between bg-green-100 rounded-lg p-2">
+                    <div className="mt-4 flex items-center justify-between bg-blue-100 rounded-lg p-2">
                       <button
                         onClick={() => decreaseQty(item)}
                         className="bg-blue-500 text-white px-3 py-1 rounded-lg text-lg"
