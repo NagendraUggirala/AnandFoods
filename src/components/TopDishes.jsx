@@ -74,7 +74,7 @@ const TopDishes = () => {
         
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
           <div>
-            <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900">
+            <h2 className="text-2xl md:text-3xl font-extrabold text-blue-800">
               Top dishes near you
             </h2>
             <p className="text-gray-500 text-sm md:text-base mt-1">
@@ -91,8 +91,8 @@ const TopDishes = () => {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-3 py-1.5 rounded-full text-xs md:text-sm border transition-all ${
                   selectedCategory === cat
-                    ? "bg-orange-500 text-white border-orange-500"
-                    : "bg-white text-gray-700 border-gray-200 hover:border-orange-400 hover:text-orange-600"
+                    ? "bg-blue-500 text-white border-blue-500"
+                    : "bg-white text-gray-700 border-gray-200 hover:border-blue-400 hover:text-blue-600"
                 }`}
               >
                 {cat}
@@ -121,7 +121,7 @@ const TopDishes = () => {
                  
                   <button
                     onClick={() => increaseQty(dish)}
-                    className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-xl font-bold text-gray-700 hover:bg-orange-500 hover:text-white transition-all"
+                    className="absolute bottom-4 right-4 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center text-xl font-bold text-gray-700 hover:bg-blue-500 hover:text-white transition-all"
                   >
                     {qty > 0 ? "✓" : "+"}
                   </button>
@@ -144,13 +144,13 @@ const TopDishes = () => {
                   </p>
 
                   <div className="mt-auto flex items-center justify-between">
-                    <span className="text-orange-500 font-semibold text-lg">
+                    <span className="text-blue-500 font-semibold text-lg">
                       ₹{dish.price}
                     </span>
 
                    
                     {qty > 0 && (
-                      <span className="text-xs bg-orange-50 text-orange-600 px-2 py-0.5 rounded-full">
+                      <span className="text-xs bg-blue-50 text-blue-600 px-2 py-0.5 rounded-full">
                         In cart: {qty}
                       </span>
                     )}
@@ -166,7 +166,7 @@ const TopDishes = () => {
           {totalItems > 0 ? (
             <span>
               You have{" "}
-              <span className="font-semibold text-orange-600">
+              <span className="font-semibold text-blue-600">
                 {totalItems}
               </span>{" "}
               item(s) in your cart.

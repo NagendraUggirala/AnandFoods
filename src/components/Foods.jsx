@@ -34,7 +34,7 @@ export default function FoodOptions() {
     <div className="w-full py-10 px-4 md:px-20">
       
       {/* Heading */}
-      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 mb-8">
+      <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-blue-800 mb-8">
         Order our best food options
       </h2>
 

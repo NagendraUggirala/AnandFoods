@@ -9,6 +9,7 @@ import AuthLayout from './components/AuthLayout'
 import SignIn from './components/SignIn'
 import Cart from './components/Cart'
 import Checkout from './components/Checkout'
+import Signup from './components/Signup'
 
 
 
@@ -33,6 +34,7 @@ export default function App() {
         </Route>
         <Route element={<AuthLayout />}>
           <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<Signup />} />
         </Route>
 
       </Routes>

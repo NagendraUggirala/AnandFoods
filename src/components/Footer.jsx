@@ -1,135 +1,132 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React from "react";
+import { Link } from "react-router-dom";
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
-    return <>
-        <footer className="bg-slate-900 text-slate-100 pt-12 pb-6 px-4 md:px-10">
-            <div className="max-w-6xl mx-auto">
-                
-                <div className="grid gap-8 md:grid-cols-4 border-b border-slate-700 pb-10">
+    return (
+        <footer className="bg-[#0a2a55] text-white pt-12 pb-6 px-4 md:px-10">
+            <div className="max-w-7xl mx-auto">
 
-                    
-                    <div className="md:col-span-2">
-                        <div className="flex items-center gap-3 mb-3">
-                            <img
-                                src="/public/footer.png"
-                                alt="AnandFoods Flag"
-                                className="w-14 h-14 object-contain"
-                            />
-                            <span className="text-2xl font-bold tracking-tight">
-                                AnandFoods
+                {/* TOP SECTION */}
+                <div className="grid gap-10 md:grid-cols-4 border-b border-blue-900 pb-10">
+
+                    {/* COLUMN 1 – LEFT BRAND BLOCK (logo on white background) */}
+                    <div className="md:col-span-1">
+                        <div className="flex items-center gap-3 mb-4">
+                            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center p-2 shadow-sm">
+                                {/* local image file from your upload */}
+                                <img
+                                    src="/public/footer.png"
+                                    alt="AnandFoods Logo"
+                                    className="w-full h-full object-contain"
+                                />
+                            </div>
+
+                            <span className="text-2xl font-bold tracking-wide">
+                                ANAND FOODS
                             </span>
                         </div>
-                        <p className="text-sm text-slate-300 leading-relaxed mb-4">
-                            Bringing your favourite meals 🥘 and daily essentials 🛒 to your doorstep — fast, fresh and full of Anand!
+
+                        <p className="text-sm text-blue-200 leading-relaxed">
+                            Bringing a better tomorrow through<br />
+                            innovation, quality and trusted service.
                         </p>
-                        <p className="text-xs text-slate-400">
-                            © {new Date().getFullYear()} AnandFoods. All rights reserved.
-                        </p>
+
+                        {/* Social Icons */}
+                        <div className="flex gap-4 mt-5">
+                            <a className="group w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center 
+             hover:bg-gray-200 transition">
+                                <FaFacebookF className="text-white group-hover:text-blue-600 transition" />
+                            </a>
+
+                            <a className="group w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center 
+             hover:bg-gray-200 transition">
+                                <FaTwitter className="text-white group-hover:text-blue-600 transition" />
+                            </a>
+
+                            <a className="group w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center 
+             hover:bg-gray-200 transition">
+                                <FaLinkedinIn className="text-white group-hover:text-blue-600 transition" />
+                            </a>
+
+                            <a className="group w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center 
+             hover:bg-gray-200 transition">
+                                <FaInstagram className="text-white group-hover:text-blue-600 transition" />
+                            </a>
+
+                        </div>
                     </div>
 
-                    
+                    {/* COLUMN 2 – QUICK LINKS */}
                     <div>
-                        <h3 className="text-sm font-semibold mb-3 text-slate-100">
-                            Quick Links
-                        </h3>
-                        <ul className="space-y-2 text-sm text-slate-300">
-
+                        <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul className="space-y-2 text-blue-200 text-sm">
                             <li>
-                                <Link to="/" className="hover:text-orange-400 hover:underline transition">
+                                <Link to="/" className="hover:underline transition">
                                     Home
                                 </Link>
                             </li>
+                            <li><Link to="/about" className="hover:underline">About</Link></li>
+                            <li><Link to="/foods" className="hover:underline">Foods</Link></li>
 
-                            <li>
-                                <Link to="/about" className="hover:text-orange-400 hover:underline transition">
-                                    About Us
-                                </Link>
-                            </li>
-
-                            <li>
-                                <Link to="/contact" className="hover:text-orange-400 hover:underline transition">
-                                    Contact Us
-                                </Link>
-                            </li>
-
-                            <li>
-                                <Link to="/foods" className="hover:text-orange-400 hover:underline transition">
-                                    Foods
-                                </Link>
-                            </li>
+                            <li><Link to="/contact" className="hover:underline">Contact</Link></li>
 
                         </ul>
                     </div>
 
-
-                   
+                    {/* COLUMN 3 – DIVISIONS */}
                     <div>
-                        <h3 className="text-sm font-semibold mb-3 text-slate-100">Contact</h3>
-                        <p className="text-sm text-slate-300">
-                            support@anandfoods.in
-                            <br />
-                            +91-98xxxxxxxx
+                        <h3 className="text-lg font-semibold mb-4">Our Divisions</h3>
+                        <ul className="space-y-2 text-blue-200 text-sm">
+                            <li>Anand Kitchens</li>
+                            <li>Anand Foods Delivery</li>
+                            <li>Anand Events Catering</li>
+                        </ul>
+                    </div>
+
+                    {/* COLUMN 4 – CONTACT INFO */}
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+
+                        <p className="text-blue-200 text-sm leading-relaxed">
+                            H.No. 131/A, 2nd Floor, MLA Colony,<br />
+                            Banjara Hills, Hyderabad – 500034.
                         </p>
 
-                        
-                        <h3 className="text-sm font-semibold mt-4 mb-3 text-slate-100">
-                            Follow Us
-                        </h3>
+                        <p className="mt-3 text-blue-200 text-sm">
+                            info.anandfoods@gmail.com
+                        </p>
 
-                        <div className="flex gap-4">
-                           
-                            <a
-                                href="#"
-                                className="w-11 h-11 rounded-full bg-black flex items-center justify-center text-white text-[18px] hover:bg-orange-500 transition-all"
-                            >
-                                <FaFacebookF />
-                            </a>
-
-                           
-                            <a
-                                href="#"
-                                className="w-11 h-11 rounded-full bg-black flex items-center justify-center text-white text-[18px] hover:bg-orange-500 transition-all"
-                            >
-                                <FaTwitter />
-                            </a>
-
-                           
-                            <a
-                                href="#"
-                                className="w-11 h-11 rounded-full bg-black flex items-center justify-center text-white text-[18px] hover:bg-orange-500 transition-all"
-                            >
-                                <FaLinkedinIn />
-                            </a>
-
-                            
-                            <a
-                                href="#"
-                                className="w-11 h-11 rounded-full bg-black flex items-center justify-center text-white text-[18px] hover:bg-orange-500 transition-all"
-                            >
-                                <FaInstagram />
-                            </a>
-                        </div>
-
-
-
+                        <p className="mt-2 text-blue-200 text-sm">
+                            +91 98000 12345
+                        </p>
                     </div>
                 </div>
 
-               
-                <div className="flex flex-col md:flex-row items-center justify-between gap-3 pt-4 text-xs text-slate-400">
-                    <div className="flex flex-wrap gap-4">
-                        <span className="hover:text-orange-400 cursor-pointer">Terms & Conditions</span>
-                        <span className="hover:text-orange-400 cursor-pointer">Privacy Policy</span>
-                        <span className="hover:text-orange-400 cursor-pointer">Help & Support</span>
+                {/* BOTTOM BAR */}
+                <div className="mt-4 pt-4 border-blue-900" />
+
+                <div className="flex flex-col md:flex-row items-center justify-between text-blue-300 text-xs mt-4">
+                    {/* left: copyright */}
+                    <div className="order-1 md:order-1">
+                        <p>© {new Date().getFullYear()} AnandFoods. All rights reserved.</p>
                     </div>
-                    <p className="text-[11px] md:text-xs">
-                        Made with ❤️ and 🧠 for food lovers.
-                    </p>
+
+                    {/* center: designed by */}
+                    <div className="order-3 md:order-2 mt-3 md:mt-0 text-center w-full md:w-auto">
+                        <p>© Designed by <span className="font-medium text-white">Designcareermetrics</span></p>
+                    </div>
+
+                    {/* right: links */}
+                    <div className="order-2 md:order-3 flex items-center gap-4 mt-3 md:mt-0">
+                        <Link className="hover:text-white transition text-blue-200 text-xs">Privacy Policy</Link>
+                        <Link className="hover:text-white transition text-blue-200 text-xs">Terms of Service</Link>
+                        <Link className="hover:text-white transition text-blue-200 text-xs">Sitemap</Link>
+                    </div>
                 </div>
             </div>
         </footer>
-    </>
-}
-export default Footer
+    );
+};
+
+export default Footer;
