@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AnandFoodsHighlights from "./AnandFoodsHighlights";
 import FoodHomeBanner from "./FoodHomeBanner";
+import FoodTypes from "./FoodTypes";
 
 export default function Hero() {
 
@@ -65,34 +66,34 @@ export default function Hero() {
 
 
   const items = [
-    { id: 1, name: "Pepsi", price: 80, img: "/img/pepsi.jpg" },
-    { id: 2, name: "Coca cola", price: 90, img: "/img/coca.jpg" },
-    { id: 3, name: "French", price: 90, img: "/img/french.jfif" },
-    { id: 4, name: "Margherita Pizza", price: 160, img: "/img/pizza1.jpg" },
-    { id: 5, name: "Sweet Corn Pizza", price: 120, img: "/img/sweet.jpg" },
-    { id: 6, name: "Bruger", price: 60, img: "/img/burger.webp" },
-    { id: 7, name: "Dilkush ", price: 490, img: "/img/dilkush.jfif" },
-    { id: 8, name: "Mixed Biryani", price: 580, img: "/img/mixed.jpg" },
-    { id: 9, name: "Mush Room curry", price: 120, img: "/img/mushroom.jpg" },
-    { id: 10, name: "Panner Rotti", price: 60, img: "/img/panner.JPG" },
-    { id: 11, name: "Veg Curries", price: 90, img: "/img/curry.jpeg" },
-    { id: 12, name: "Chicken Biryani", price: 180, img: "/img/briyani.avif" },
-    { id: 13, name: "Mutton Biryani", price: 250, img: "/img/mutton.webp" },
-    { id: 14, name: "Fish Biryani", price: 150, img: "/img/fish.avif" },
-    { id: 15, name: "Samosa", price: 10, img: "/img/somasa.webp" },
-    { id: 16, name: "Jalebi", price: 25, img: "/img/jalebi.webp" },
-    { id: 17, name: "Mirchi Bajji", price: 15, img: "/img/mirchi.jpg" },
-    { id: 18, name: "Gulab Jamun", price: 20, img: "/img/gulab1.webp" },
-    { id: 19, name: "Ice Cream", price: 40, img: "/img/ice.jpg" },
-    { id: 20, name: "Laddu", price: 15, img: "/img/laddu.webp" },
-    { id: 21, name: "Virgin Mojito", price: 80, img: "/img/mojo.webp" },
-    { id: 22, name: "Blue Lagoon", price: 90, img: "/img/blue.webp" },
-    { id: 23, name: "Strawberry Mocktail", price: 100, img: "/img/strawberry.webp" },
-    { id: 24, name: "Orange Juice", price: 70, img: "/img/orange.jfif" },
-    { id: 25, name: "Mango Juice", price: 60, img: "/img/mango.jpg" },
-    { id: 26, name: "Pineapple Juice", price: 55, img: "/img/pineapple.avif" },
-    { id: 27, name: "Apple Juice", price: 55, img: "/img/apple.jpg" },
-    { id: 28, name: "Dry Fruit Juice", price: 55, img: "/img/Dryfruit.jpg" },
+    { id: 33, name: "Pepsi", price: 80, img: "/img/pepsi.jpg" },
+    { id: 34, name: "Coca cola", price: 90, img: "/img/coca.jpg" },
+    { id: 35, name: "French", price: 90, img: "/img/french.jfif" },
+    { id: 36, name: "Margherita Pizza", price: 160, img: "/img/pizza1.jpg" },
+    { id: 37, name: "Sweet Corn Pizza", price: 120, img: "/img/sweet.jpg" },
+    { id: 38, name: "Bruger", price: 60, img: "/img/burger.webp" },
+    { id: 39, name: "Dilkush ", price: 490, img: "/img/dilkush.jfif" },
+    { id: 40, name: "Mixed Biryani", price: 580, img: "/img/mixed.jpg" },
+    { id: 41, name: "Mush Room curry", price: 120, img: "/img/mushroom.jpg" },
+    { id: 42, name: "Panner Rotti", price: 60, img: "/img/panner.JPG" },
+    { id: 43, name: "Veg Curries", price: 90, img: "/img/curry.jpeg" },
+    { id: 44, name: "Chicken Biryani", price: 180, img: "/img/briyani.avif" },
+    { id: 45, name: "Mutton Biryani", price: 250, img: "/img/mutton.webp" },
+    { id: 46, name: "Fish Biryani", price: 150, img: "/img/fish.avif" },
+    { id: 47, name: "Samosa", price: 10, img: "/img/somasa.webp" },
+    { id: 48, name: "Jalebi", price: 25, img: "/img/jalebi.webp" },
+    { id: 49, name: "Mirchi Bajji", price: 15, img: "/img/mirchi.jpg" },
+    { id: 50, name: "Gulab Jamun", price: 20, img: "/img/gulab1.webp" },
+    { id: 51, name: "Ice Cream", price: 40, img: "/img/ice.jpg" },
+    { id: 52, name: "Laddu", price: 15, img: "/img/laddu.webp" },
+    { id: 53, name: "Virgin Mojito", price: 80, img: "/img/mojo.webp" },
+    { id: 54, name: "Blue Lagoon", price: 90, img: "/img/blue.webp" },
+    { id: 55, name: "Strawberry Mocktail", price: 100, img: "/img/strawberry.webp" },
+    { id: 56, name: "Orange Juice", price: 70, img: "/img/orange.jfif" },
+    { id: 57, name: "Mango Juice", price: 60, img: "/img/mango.jpg" },
+    { id: 58, name: "Pineapple Juice", price: 55, img: "/img/pineapple.avif" },
+    { id: 59, name: "Apple Juice", price: 55, img: "/img/apple.jpg" },
+    { id: 60, name: "Dry Fruit Juice", price: 55, img: "/img/Dryfruit.jpg" },
   ];
 
   return (
@@ -106,6 +107,7 @@ export default function Hero() {
 
         <FoodHomeBanner />
         <AnandFoodsHighlights />
+        <FoodTypes />
         {/* MENU GRID */}
         <section className="px-6 md:px-12 lg:px-20 py-14">
           <h2 className="text-3xl font-bold text-black-700 text-center mb-10">
