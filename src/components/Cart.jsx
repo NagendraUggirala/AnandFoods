@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { FiEdit3, FiMinus, FiPlus } from "react-icons/fi";
 import { FaRegMap } from "react-icons/fa";
 
+import { useNavigate } from "react-router-dom";
+
 // ---- 5 Manual Top Dishes ----
 const topDishes = [
   { id: 101, name: "Chocolate Lava Cake", price: 199, img: "https://hips.hearstapps.com/hmg-prod/images/chocolate-lava-cake-index-65c25056f21fb.jpg?crop=0.8891482670297961xw:1xh;center,top&resize=1200:*" },
@@ -12,6 +14,9 @@ const topDishes = [
 ];
 
 export default function Cart() {
+
+  /* 🟩 FIXED — initialize navigation */
+  const navigate = useNavigate();     // <-- FIXED HERE
 
   const [cart, setCart] = useState([]);
   const [address, setAddress] = useState("7th Phase, KPHB, Hyderabad, Telangana");
@@ -206,7 +211,10 @@ export default function Cart() {
             </div>
           </div>
 
-          <button className="bg-blue-600 text-white w-full py-4 rounded-xl text-lg font-semibold shadow">
+          <button 
+            onClick={() => navigate("/checkout")}   // <-- FIXED HERE
+            className="bg-blue-600 text-white w-full py-4 rounded-xl text-lg font-semibold shadow"
+          >
             Proceed to Checkout →
           </button>
         </div>
