@@ -65,26 +65,34 @@ export default function Hero() {
 
 
   const items = [
-    { id: 1, name: "Mush Room curry", price: 120, img: "/img/mushroom.jpg" },
-    { id: 2, name: "Panner Rotti", price: 60, img: "/img/panner.JPG" },
-    { id: 3, name: "Veg Curries", price: 90, img: "/img/curry.jpeg" },
-    { id: 4, name: "Chicken Biryani", price: 180, img: "/img/briyani.avif" },
-    { id: 5, name: "Mutton Biryani", price: 250, img: "/img/mutton.webp" },
-    { id: 6, name: "Fish Biryani", price: 150, img: "/img/fish.avif" },
-    { id: 7, name: "Samosa", price: 10, img: "/img/somasa.webp" },
-    { id: 8, name: "Jalebi", price: 25, img: "/img/jalebi.webp" },
-    { id: 9, name: "Mirchi Bajji", price: 15, img: "/img/mirchi.jpg" },
-    { id: 10, name: "Gulab Jamun", price: 20, img: "/img/gulab1.webp" },
-    { id: 11, name: "Ice Cream", price: 40, img: "/img/ice.jpg" },
-    { id: 12, name: "Laddu", price: 15, img: "/img/laddu.webp" },
-    { id: 13, name: "Virgin Mojito", price: 80, img: "/img/mojo.webp" },
-    { id: 14, name: "Blue Lagoon", price: 90, img: "/img/blue.webp" },
-    { id: 15, name: "Strawberry Mocktail", price: 100, img: "/img/strawberry.webp" },
-    { id: 17, name: "Orange Juice", price: 70, img: "/img/orange.jfif" },
-    { id: 18, name: "Mango Juice", price: 60, img: "/img/mango.jpg" },
-    { id: 20, name: "Pineapple Juice", price: 55, img: "/img/pineapple.avif" },
-    { id: 21, name: "Apple Juice", price: 55, img: "/img/apple.jpg" },
-    { id: 22, name: "Dry Fruit Juice", price: 55, img: "/img/Dryfruit.jpg" },
+    { id: 1, name: "Pepsi", price: 80, img: "/img/pepsi.jpg" },
+    { id: 2, name: "Coca cola", price: 90, img: "/img/coca.jpg" },
+    { id: 3, name: "French", price: 90, img: "/img/french.jfif" },
+    { id: 4, name: "Margherita Pizza", price: 160, img: "/img/pizza1.jpg" },
+    { id: 5, name: "Sweet Corn Pizza", price: 120, img: "/img/sweet.jpg" },
+    { id: 6, name: "Bruger", price: 60, img: "/img/burger.webp" },
+    { id: 7, name: "Dilkush ", price: 490, img: "/img/dilkush.jfif" },
+    { id: 8, name: "Mixed Biryani", price: 580, img: "/img/mixed.jpg" },
+    { id: 9, name: "Mush Room curry", price: 120, img: "/img/mushroom.jpg" },
+    { id: 10, name: "Panner Rotti", price: 60, img: "/img/panner.JPG" },
+    { id: 11, name: "Veg Curries", price: 90, img: "/img/curry.jpeg" },
+    { id: 12, name: "Chicken Biryani", price: 180, img: "/img/briyani.avif" },
+    { id: 13, name: "Mutton Biryani", price: 250, img: "/img/mutton.webp" },
+    { id: 14, name: "Fish Biryani", price: 150, img: "/img/fish.avif" },
+    { id: 15, name: "Samosa", price: 10, img: "/img/somasa.webp" },
+    { id: 16, name: "Jalebi", price: 25, img: "/img/jalebi.webp" },
+    { id: 17, name: "Mirchi Bajji", price: 15, img: "/img/mirchi.jpg" },
+    { id: 18, name: "Gulab Jamun", price: 20, img: "/img/gulab1.webp" },
+    { id: 19, name: "Ice Cream", price: 40, img: "/img/ice.jpg" },
+    { id: 20, name: "Laddu", price: 15, img: "/img/laddu.webp" },
+    { id: 21, name: "Virgin Mojito", price: 80, img: "/img/mojo.webp" },
+    { id: 22, name: "Blue Lagoon", price: 90, img: "/img/blue.webp" },
+    { id: 23, name: "Strawberry Mocktail", price: 100, img: "/img/strawberry.webp" },
+    { id: 24, name: "Orange Juice", price: 70, img: "/img/orange.jfif" },
+    { id: 25, name: "Mango Juice", price: 60, img: "/img/mango.jpg" },
+    { id: 26, name: "Pineapple Juice", price: 55, img: "/img/pineapple.avif" },
+    { id: 27, name: "Apple Juice", price: 55, img: "/img/apple.jpg" },
+    { id: 28, name: "Dry Fruit Juice", price: 55, img: "/img/Dryfruit.jpg" },
   ];
 
   return (
@@ -126,7 +134,7 @@ export default function Hero() {
                   {qty === 0 ? (
                     <button
                       onClick={() => increaseQty(item)}
-                      className="mt-4 w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
+                      className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-green-700 transition"
                     >
                       Add to Cart
                     </button>
@@ -134,7 +142,7 @@ export default function Hero() {
                     <div className="mt-4 flex items-center justify-between bg-green-100 rounded-lg p-2">
                       <button
                         onClick={() => decreaseQty(item)}
-                        className="bg-red-500 text-white px-3 py-1 rounded-lg text-lg"
+                        className="bg-blue-500 text-white px-3 py-1 rounded-lg text-lg"
                       >
                         -
                       </button>
@@ -143,7 +151,7 @@ export default function Hero() {
 
                       <button
                         onClick={() => increaseQty(item)}
-                        className="bg-green-600 text-white px-3 py-1 rounded-lg text-lg"
+                        className="bg-blue-600 text-white px-3 py-1 rounded-lg text-lg"
                       >
                         +
                       </button>

@@ -14,7 +14,6 @@ import Checkout from './components/Checkout'
 
 
 
-
 export default function App() {
   return (
 
@@ -28,8 +27,7 @@ export default function App() {
           <Route path="/foods" element={<Foods />} />
 
           <Route path="/cart" element={<Cart />} />
-
-          <Route path='checkout' element={<Checkout />} />
+          <Route path="/checkout" element={<Checkout />} />
 
 
         </Route>

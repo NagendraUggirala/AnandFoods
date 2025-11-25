@@ -89,7 +89,7 @@ const SignIn = () => {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="enter your email"
-                  className="w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  className="w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
 
@@ -108,7 +108,7 @@ const SignIn = () => {
                   value={form.password}
                   onChange={handleChange}
                   placeholder="enter your password"
-                  className="w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
+                  className="w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                 />
               </div>
 
@@ -126,7 +126,7 @@ const SignIn = () => {
                 </label>
                 <button
                   type="button"
-                  className="text-orange-600 hover:underline"
+                  className="text-blue-600 hover:underline"
                 >
                   Forgot password?
                 </button>
@@ -135,7 +135,7 @@ const SignIn = () => {
               {/* Submit */}
               <button
                 type="submit"
-                className="w-full mt-2 inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-orange-500 text-white text-sm font-semibold shadow-md hover:bg-orange-600 hover:shadow-lg transition-all"
+                className="w-full mt-2 inline-flex items-center justify-center px-4 py-2.5 rounded-full bg-blue-500 text-white text-sm font-semibold shadow-md hover:bg-blue-600 hover:shadow-lg transition-all"
               >
                 Sign In
               </button>
@@ -144,7 +144,7 @@ const SignIn = () => {
             {/* Bottom text */}
             <p className="mt-5 text-xs md:text-sm text-gray-500 text-center">
               New to AnandFoods?{" "}
-              <span className="text-orange-600 font-medium cursor-pointer hover:underline">
+              <span className="text-blue-600 font-medium cursor-pointer hover:underline">
                 Create an account
               </span>
               {" "}to start ordering instantly.

@@ -84,7 +84,7 @@ export default function Cart() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => decreaseQty(item.id)}
-                className="bg-red-500 text-white px-3 py-1 rounded-lg text-lg"
+                className="bg-blue-500 text-white px-3 py-1 rounded-lg text-lg"
               >
                 -
               </button>
@@ -93,7 +93,7 @@ export default function Cart() {
 
               <button
                 onClick={() => increaseQty(item.id)}
-                className="bg-green-600 text-white px-3 py-1 rounded-lg text-lg"
+                className="bg-blue-600 text-white px-3 py-1 rounded-lg text-lg"
               >
                 +
               </button>
