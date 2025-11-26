@@ -10,6 +10,10 @@ import SignIn from './components/SignIn'
 import Cart from './components/Cart'
 import Checkout from './components/Checkout'
 import Signup from './components/Signup'
+import FoodDetailsEnhanced from './components/FoodDetailsEnhanced'
+
+
+import ScrollToTop from './components/ScrollToTop'
 
 
 
@@ -20,18 +24,19 @@ export default function App() {
 
 
     <Router>
+      <ScrollToTop/>
       <Routes>
         <Route path='/' element={<MainLayout />}>
           <Route index element={<Hero />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/foods" element={<Foods />} />
-
+        
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
 
-
         </Route>
+        <Route path="/food/:foodName" element={<FoodDetailsEnhanced />} />
         <Route element={<AuthLayout />}>
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<Signup />} />

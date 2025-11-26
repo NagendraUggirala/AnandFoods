@@ -110,7 +110,7 @@ export default function Hero() {
         <FoodTypes />
         {/* MENU GRID */}
         <section className="px-6 md:px-12 lg:px-20 py-14">
-          <h2 className="text-3xl font-bold text-black-700 text-center mb-10">
+          <h2 className="text-3xl font-bold text-blue-800 text-center mb-10">
             Menu Items
           </h2>
 
