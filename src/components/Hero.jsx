@@ -2,59 +2,29 @@ import React, { useState, useEffect } from "react";
 import AnandFoodsHighlights from "./AnandFoodsHighlights";
 import FoodHomeBanner from "./FoodHomeBanner";
 import FoodTypes from "./FoodTypes";
+import { useCart } from "../utils/cartUtils";
 
 export default function Hero() {
 
 
+  const { getCart, addToCart, decreaseCart } = useCart();
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("cart")) || [];
-    setCart(saved);
+    setCart(getCart());
   }, []);
 
 
 
 
-  const updateCart = (newCart) => {
-    setCart(newCart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
-  };
-
-
-
   const increaseQty = (item) => {
-    let newCart = [...cart];
-    const exists = newCart.find((x) => x.id === item.id);
-
-    if (exists) {
-      newCart = newCart.map((x) =>
-        x.id === item.id ? { ...x, qty: x.qty + 1 } : x
-      );
-    } else {
-      newCart.push({ ...item, qty: 1 });
-    }
-
-    updateCart(newCart);
+    const newCart = addToCart(item, cart);
+    setCart(newCart);
   };
-
-
 
   const decreaseQty = (item) => {
-    let newCart = [...cart];
-
-    const exists = newCart.find((x) => x.id === item.id);
-    if (!exists) return;
-
-    if (exists.qty === 1) {
-      newCart = newCart.filter((x) => x.id !== item.id);
-    } else {
-      newCart = newCart.map((x) =>
-        x.id === item.id ? { ...x, qty: x.qty - 1 } : x
-      );
-    }
-
-    updateCart(newCart);
+    const newCart = decreaseCart(item.id, cart);
+    setCart(newCart);
   };
 
 

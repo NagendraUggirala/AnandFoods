@@ -3,6 +3,7 @@ import { FiEdit3, FiMinus, FiPlus } from "react-icons/fi";
 import { FaRegMap } from "react-icons/fa";
 
 import { useNavigate } from "react-router-dom";
+import { useCart } from "../utils/cartUtils";
 
 // ---- 5 Manual Top Dishes ----
 const topDishes = [
@@ -18,6 +19,7 @@ export default function Cart() {
   /* 🟩 FIXED — initialize navigation */
   const navigate = useNavigate();     // <-- FIXED HERE
 
+  const { getCart, addToCart, decreaseCart } = useCart();
   const [cart, setCart] = useState([]);
   const [address, setAddress] = useState("7th Phase, KPHB, Hyderabad, Telangana");
   const [editingAddress, setEditingAddress] = useState(false);
@@ -33,33 +35,17 @@ export default function Cart() {
   const taxPercent = 5;
 
   useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("cart")) || [];
-    setCart(saved);
+    setCart(getCart());
   }, []);
 
-  const updateCart = (newCart) => {
-    setCart(newCart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
-  };
-
   const increaseQty = (dish) => {
-    let newCart = [...cart];
-    const exists = newCart.find(x => x.id === dish.id);
-
-    if (exists) {
-      newCart = newCart.map(x => x.id === dish.id ? { ...x, qty: x.qty + 1 } : x);
-    } else {
-      newCart.push({ ...dish, qty: 1 });
-    }
-    updateCart(newCart);
+    const newCart = addToCart(dish, cart);
+    setCart(newCart);
   };
 
   const decreaseQty = (id) => {
-    updateCart(
-      cart
-        .map(item => item.id === id ? { ...item, qty: item.qty - 1 } : item)
-        .filter(item => item.qty > 0)
-    );
+    const newCart = decreaseCart(id, cart);
+    setCart(newCart);
   };
 
   const getQty = (id) => {

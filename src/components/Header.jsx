@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaShoppingCart, FaMapMarkerAlt, FaSearch } from "react-icons/fa";
+import { useCart } from "../utils/cartUtils";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -23,6 +24,30 @@ export default function Header() {
   const filteredRestaurants = restaurants.filter((r) =>
     r.toLowerCase().includes(searchQuery.toLowerCase())
   );
+
+  // Cart count
+  const { getCart } = useCart();
+  const getTotalCount = () => {
+    const cart = getCart() || [];
+    return cart.reduce((sum, item) => sum + (item.qty || 0), 0);
+  };
+  const [cartCount, setCartCount] = useState(getTotalCount());
+
+  useEffect(() => {
+    const handler = () => setCartCount(getTotalCount());
+    // Custom event dispatched when cart changes within the app
+    window.addEventListener("cart_updated", handler);
+    // Storage event for other tabs/windows
+    const storageHandler = (e) => {
+      if (e.key === "cart") handler();
+    };
+    window.addEventListener("storage", storageHandler);
+
+    return () => {
+      window.removeEventListener("cart_updated", handler);
+      window.removeEventListener("storage", storageHandler);
+    };
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-200 shadow-sm">
@@ -151,7 +176,15 @@ export default function Header() {
             to="/cart"
             className="px-4 py-2.5 rounded-lg text-base font-semibold text-blue-800 flex items-center gap-1 hover:bg-blue-50 hover:text-blue-700 transition-all duration-200"
           >
-            <FaShoppingCart /> Cart
+            <div className="relative inline-flex items-center">
+              <FaShoppingCart />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
+            </div>
+            <span className="ml-1">Cart</span>
           </Link>
 
           <Link
@@ -203,7 +236,15 @@ export default function Header() {
             to="/cart"
             className="block text-lg flex items-center gap-2"
           >
-            <FaShoppingCart /> Cart
+            <div className="relative inline-flex items-center">
+              <FaShoppingCart />
+              {cartCount > 0 && (
+                <span className="absolute -top-2 -right-3 bg-red-500 text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                  {cartCount}
+                </span>
+              )}
+            </div>
+            <span className="ml-2">Cart</span>
           </Link>
 
           <Link

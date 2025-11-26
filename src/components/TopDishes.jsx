@@ -1,44 +1,24 @@
 import React, { useState, useEffect } from "react";
 import dishes from "../data/dishes.json";
+import { useCart } from "../utils/cartUtils";
 
 const TopDishes = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   
+ 
+  const { getCart, addToCart } = useCart();
   const [cart, setCart] = useState([]);
 
-  
   useEffect(() => {
-    const saved = JSON.parse(localStorage.getItem("cart")) || [];
-    setCart(saved);
+    setCart(getCart());
   }, []);
 
-  
-  const updateCart = (newCart) => {
-    setCart(newCart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
-  };
-
- 
   const increaseQty = (dish) => {
-    let newCart = [...cart];
-    const exists = newCart.find((x) => x.id === dish.id);
-
-    if (exists) {
-      newCart = newCart.map((x) =>
-        x.id === dish.id ? { ...x, qty: x.qty + 1 } : x
-      );
-    } else {
-      newCart.push({
-        id: dish.id,
-        name: dish.name,
-        price: dish.price,
-        img: dish.image, 
-        qty: 1,
-      });
-    }
-
-    updateCart(newCart);
+    // Map dish to cart item shape expected by app
+    const item = { id: dish.id, name: dish.name, price: dish.price, img: dish.image };
+    const newCart = addToCart(item, cart);
+    setCart(newCart);
   };
 
   
