@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { IoChevronDown, IoChevronUp } from "react-icons/io5";
+import ChatBot from "./ChatBot";
 
 
 
@@ -326,36 +327,12 @@ export default function Contact() {
                 Our support team is here to assist you. How can we help?
               </p>
 
-              <button className="
-        w-full py-2 bg-orange-500 hover:bg-orange-600 
-        text-white rounded-lg transition
-      ">
-                Start Chat
-              </button>
-
-              <button
-                onClick={() => setOpenIndex(null)}
-                className="mt-2 text-sm text-gray-600 underline w-full text-center"
-              >
-                Close
-              </button>
+             
             </div>
           )}
 
           {/* CHAT FLOATING BUTTON */}
-          <button
-            onClick={() =>
-              setOpenIndex(openIndex === "chat" ? null : "chat")
-            }
-            className="
-      w-14 h-14 rounded-full 
-      bg-blue-500 hover:bg-blue-600 
-      shadow-lg flex items-center justify-center 
-      text-white text-3xl transition transform hover:scale-110
-    "
-          >
-            💬
-          </button>
+          <ChatBot />
 
 
 
@@ -366,7 +343,7 @@ export default function Contact() {
       </div>
       <div className="w-full h-[50vh] rounded-lg overflow-hidden">
         <iframe
-          src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.881074908576!2d77.5942602748523!3d12.934462487397126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15c49c040309%3A0x6553433f72187b01!2sBangalore%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
           title="AnandFoods Office Location "
           className="w-full h-full border-0"
           loading="fast"
