@@ -63,7 +63,7 @@ export default function FoodOptions() {
               className="flex flex-col items-center cursor-pointer min-w-[110px] hover:scale-105 transition"
             >
               <img src={item.img} alt={item.name}
-                className="w-25 h-25 sm:w-24 sm:h-24 rounded-full shadow-md object-cover" />
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full shadow-md object-cover" />
               <p className="mt-2 font-semibold text-gray-800">{item.name}</p>
             </div>
           ))}
