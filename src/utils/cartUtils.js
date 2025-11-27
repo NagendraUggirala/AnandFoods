@@ -7,10 +7,10 @@ export function useCart() {
   const saveCart = (newCart) => {
     localStorage.setItem("cart", JSON.stringify(newCart));
     try {
-      // Notify other parts of the app that the cart changed
+      
       window.dispatchEvent(new CustomEvent("cart_updated", { detail: { cart: newCart } }));
     } catch (e) {
-      // ignore in non-browser environments
+      
     }
   };
 

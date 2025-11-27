@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import AnandFoodsHighlights from "./AnandFoodsHighlights";
-import FoodHomeBanner from "./FoodHomeBanner";
-import FoodTypes from "./FoodTypes";
+import AnandFoodsHighlights from "../components/AnandFoodsHighlights";
+import FoodHomeBanner from "../components/FoodHomeBanner";
+import FoodTypes from "../components/FoodTypes";
 import { useCart } from "../utils/cartUtils";
 
 export default function Hero() {

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { IoChevronDown, IoChevronUp } from "react-icons/io5";
-import ChatBot from "./ChatBot";
+import ChatBot from "../components/ChatBot";
 
 
 

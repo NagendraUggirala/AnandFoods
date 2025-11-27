@@ -1,5 +1,5 @@
 import React from "react";
-import WhyCustomersLoveUsSlider from "./WhyCustomersLoveUsSlider";
+import WhyCustomersLoveUsSlider from "../components/WhyCustomersLoveUsSlider";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 export default function AboutPage() {

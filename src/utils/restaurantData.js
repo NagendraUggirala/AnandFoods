@@ -162,7 +162,7 @@ export const restaurantData = {
   Biryani: {
     restaurants: [
       {
-        name: "Sri Tiffins",
+        name: "Biryani House",
         rating: 4.6,
         reviews: 2100,
         deliveryTime: "20-30 mins",
@@ -170,7 +170,7 @@ export const restaurantData = {
         minOrder: 100,
       },
       {
-        name: "Idli Factory",
+        name: "Spice Villa",
         rating: 4.4,
         reviews: 1800,
         deliveryTime: "25-35 mins",
@@ -179,7 +179,7 @@ export const restaurantData = {
       },
       
       {
-        name: "Udupi House",
+        name: "Biryani Express",
         rating: 4.3,
         reviews: 1650,
         deliveryTime: "28-38 mins",

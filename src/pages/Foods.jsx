@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
-import TopDishes from "./TopDishes";
-import AutoMovingCards from "./AutoMovingCards";
+import TopDishes from "../components/TopDishes";
+import AutoMovingCards from "../components/AutoMovingCards";
 
 export default function FoodOptions() {
   const scrollRef = useRef(null);
