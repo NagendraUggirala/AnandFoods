@@ -73,7 +73,7 @@ export default function Cart() {
   return (
     <div className="min-h-screen bg-white p-6">
       
-      <h1 className="text-3xl font-bold text-center mb-8">🛒 Your Cart</h1>
+      <h1 className="text-3xl text-blue-800 font-bold text-center mb-8">🛒 Your Cart</h1>
 
       {/* ---- MAIN GRID ---- */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
@@ -147,25 +147,46 @@ export default function Cart() {
         <div className="lg:col-span-5 space-y-6">
 
           {/* Coupon */}
-          <div className="bg-white rounded-2xl shadow p-5">
-            <h3 className="font-semibold mb-2">Have a Promo Code?</h3>
-            <div className="flex">
-              <input
-                type="text"
-                value={coupon}
-                onChange={(e) => setCoupon(e.target.value)}
-                className="border p-3 rounded-l-xl flex-1"
-              />
-              <button onClick={applyCoupon} className="bg-blue-600 text-white px-5 rounded-r-xl">
-                Apply
-              </button>
-            </div>
-            {couponMessage && (
-              <p className={`mt-2 text-sm ${discount ? "text-green-600" : "text-red-600"}`}>
-                {couponMessage}
-              </p>
-            )}
-          </div>
+         <div className="bg-white rounded-2xl shadow p-5">
+  <h3 className="font-semibold mb-2">Have a Promo Code?</h3>
+
+  <div className="flex flex-col sm:flex-row gap-3 sm:gap-0">
+    <input
+      type="text"
+      value={coupon}
+      onChange={(e) => setCoupon(e.target.value)}
+      className="
+        border p-3 
+        rounded-xl 
+        sm:rounded-l-xl sm:rounded-r-none
+        flex-1
+        w-full
+      "
+      placeholder="Enter promo code"
+    />
+
+    <button
+      onClick={applyCoupon}
+      className="
+        bg-blue-600 text-white 
+        px-5 py-3 
+        rounded-xl 
+        sm:rounded-r-xl sm:rounded-l-none
+        w-full sm:w-auto
+        font-medium
+      "
+    >
+      Apply
+    </button>
+  </div>
+
+  {couponMessage && (
+    <p className={`mt-2 text-sm ${discount ? "text-green-600" : "text-red-600"}`}>
+      {couponMessage}
+    </p>
+  )}
+</div>
+
 
           {/* Bill Summary */}
           <div className="bg-white rounded-2xl shadow p-5 space-y-3">

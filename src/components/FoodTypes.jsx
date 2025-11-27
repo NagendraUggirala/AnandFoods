@@ -3,83 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { IoChevronBack, IoChevronForward } from "react-icons/io5";
 
 // Restaurant & Related item data
-const restaurantData = {
-  Dosa: {
-    restaurants: ["Venky's Tiffins", "Ram Ki Bandi", "Chutneys", "Minerva"],
-    related: [
-      { id: 61, name: "Masala Dosa", price: 120, img: "/foods/dosa.png" },
-      { id: 62, name: "Onion Dosa", price: 130, img: "/foods/dosa.png" },
-      { id: 63, name: "Paper Dosa", price: 160, img: "/foods/dosa.png" },
-      { id: 64, name: "Rava Dosa", price: 140, img: "/foods/dosa.png" }
-    ]
-  },
 
-  Idli: {
-    restaurants: ["Sri Tiffins", "Idli Factory", "EatWell", "Udupi House"],
-    related: [
-      { id: 65, name: "Plain Idli", price: 60, img: "/foods/idli.png" },
-      { id: 66, name: "Sambar Idli", price: 80, img: "/foods/idli.png" },
-      { id: 67, name: "Ghee Idli", price: 90, img: "/foods/idli.png" },
-      { id: 68, name: "Rava Idli", price: 85, img: "/foods/idli.png" }
-    ]
-  },
-  Poori: {
-    restaurants: ["Sri Tiffins", "Idli Factory", "EatWell", "Udupi House"],
-    related: [
-      { id: 69, name: "Plain Idli", price: 60, img: "/foods/idli.png" },
-      { id: 70, name: "Sambar Idli", price: 80, img: "/foods/idli.png" },
-      { id: 71, name: "Ghee Idli", price: 90, img: "/foods/idli.png" },
-      { id: 72, name: "Rava Idli", price: 85, img: "/foods/idli.png" }
-    ]
-  },
-  Pesarattu: {
-    restaurants: ["Sri Tiffins", "Idli Factory", "EatWell", "Udupi House"],
-    related: [
-      { id: 73, name: "Plain Idli", price: 60, img: "/foods/idli.png" },
-      { id: 74, name: "Sambar Idli", price: 80, img: "/foods/idli.png" },
-      { id: 75, name: "Ghee Idli", price: 90, img: "/foods/idli.png" },
-      { id: 76, name: "Rava Idli", price: 85, img: "/foods/idli.png" }
-    ]
-  },
-  Vada: {
-    restaurants: ["Sri Tiffins", "Idli Factory", "EatWell", "Udupi House"],
-    related: [
-      { id: 77, name: "Plain Idli", price: 60, img: "/foods/idli.png" },
-      { id: 78, name: "Sambar Idli", price: 80, img: "/foods/idli.png" },
-      { id: 79, name: "Ghee Idli", price: 90, img: "/foods/idli.png" },
-      { id: 80, name: "Rava Idli", price: 85, img: "/foods/idli.png" }
-    ]
-  },
-  Omelette: {
-    restaurants: ["Sri Tiffins", "Idli Factory", "EatWell", "Udupi House"],
-    related: [
-      { id: 81, name: "Plain Idli", price: 60, img: "/foods/idli.png" },
-      { id: 82, name: "Sambar Idli", price: 80, img: "/foods/idli.png" },
-      { id: 83, name: "Ghee Idli", price: 90, img: "/foods/idli.png" },
-      { id: 84, name: "Rava Idli", price: 85, img: "/foods/idli.png" }
-    ]
-  },
-
-  Cake: {
-    restaurants: ["CakeZone", "WarmOven", "Sweet Bake", "Bakers Hub"],
-    related: [
-      { id: 85, name: "Chocolate Cake", price: 250, img: "/foods/cake.avif" },
-      { id: 86, name: "Red Velvet Cake", price: 290, img: "/foods/cake.avif" },
-      { id: 87, name: "Black Forest", price: 230, img: "/foods/cake.avif" },
-      { id: 88, name: "Pineapple Cake", price: 200, img: "/foods/cake.avif" }
-    ]
-  },
-
-  Tea: {
-    restaurants: ["CakeZone", "WarmOven", "Sweet Bake", "Bakers Hub"],
-    related: [
-      { id: 93, name: "Chocolate Cake", price: 250, img: "/foods/cake.avif" },
-      { id: 94, name: "Red Velvet Cake", price: 290, img: "/foods/cake.avif" },
-      { id: 95, name: "Black Forest", price: 230, img: "/foods/cake.avif" },
-      { id: 96, name: "Pineapple Cake", price: 200, img: "/foods/cake.avif" }
-    ]
-  } 
-};
 
 export default function FoodOptions() {
   const scrollRef = useRef(null);
@@ -139,7 +63,7 @@ export default function FoodOptions() {
               className="flex flex-col items-center cursor-pointer min-w-[110px] hover:scale-105 transition"
             >
               <img src={item.img} alt={item.name}
-                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full shadow-md object-cover" />
+                className="w-25 h-25 sm:w-24 sm:h-24 rounded-full shadow-md object-cover" />
               <p className="mt-2 font-semibold text-gray-800">{item.name}</p>
             </div>
           ))}
